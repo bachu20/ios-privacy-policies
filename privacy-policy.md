@@ -135,7 +135,7 @@ Since all data is stored locally on your device, the risk of a data breach throu
 ---
 
 **Daily Dose**  
-Brandon Ach  
+Brandon A.  
 iOS App Developer  
 bowling.premier_9s@icloud.com
 
