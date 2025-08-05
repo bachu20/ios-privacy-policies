@@ -28,9 +28,11 @@ To view the privacy policy locally:
 1. Clone this repository
 2. Open `index.html` in your web browser
 3. Or serve it using a local server:
+
    ```bash
    python -m http.server 8000
    ```
+
    Then visit `http://localhost:8000`
 
 ## Updating the Privacy Policy
@@ -44,5 +46,6 @@ To update the privacy policy:
 ## Contact
 
 For questions about this privacy policy, contact:
-- Email: bowling.premier_9s@icloud.com
-- Website: https://dailydose.app 
+
+- Email: <bowling.premier_9s@icloud.com>
+- Website: <https://dailydose.app>
