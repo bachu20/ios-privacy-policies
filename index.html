@@ -5,232 +5,602 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Daily Dose</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
+        /* Modern CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 50%, #ff8e53 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container with modern styling */
         .container {
             background: white;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Header section with app theme */
+        .header {
+            background: white;
+            color: #2d3748;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            color: #ff6b35;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Main content area */
+        .content {
+            padding: 40px;
+        }
+
+        /* Typography improvements */
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
         h1 {
-            color: #6c5ce7;
-            border-bottom: 3px solid #6c5ce7;
-            padding-bottom: 10px;
+            color: #ff6b35;
+            font-size: 2rem;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
         }
+
         h2 {
-            color: #2d3436;
-            margin-top: 30px;
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            position: relative;
         }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #ff9a56, #ff6b35);
+            border-radius: 2px;
+        }
+
         h3 {
-            color: #636e72;
-            margin-top: 20px;
+            color: #4a5568;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
         }
-        ul {
-            padding-left: 20px;
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #4a5568;
         }
+
+        /* Enhanced list styling */
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
         li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        ul li::marker {
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        /* Modern highlight boxes with app theme */
+        .highlight {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 4px solid #ff6b35;
+            box-shadow: 0 4px 6px rgba(255, 107, 53, 0.1);
+        }
+
+        .highlight h2 {
+            margin-top: 0;
+            color: #ff6b35;
+        }
+
+        .highlight h2::before {
+            display: none;
+        }
+
+        /* Enhanced contact section with app theme */
+        .contact {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            border: 2px solid #ff6b35;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #ff9a56, #ff6b35);
+        }
+
+        .contact h2 {
+            color: #ff6b35;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .contact h2::before {
+            display: none;
+        }
+
+        /* Modern link styling with app theme */
+        a {
+            color: #ff6b35;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #ff9a56;
+            border-bottom-color: #ff9a56;
+        }
+
+        .contact-link {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: rgba(255, 107, 53, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* Enhanced footer */
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+            color: #718096;
+        }
+
+        .footer strong {
+            color: #4a5568;
+        }
+
+        /* Accessibility improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus states for accessibility */
+        a:focus,
+        button:focus {
+            outline: 2px solid #ff6b35;
+            outline-offset: 2px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                border-radius: 16px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .highlight,
+            .contact {
+                padding: 20px;
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .header {
+                background: #ff6b35 !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Table of contents styling with app theme */
+        .toc {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6b35;
+            box-shadow: 0 4px 6px rgba(255, 107, 53, 0.1);
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #ff6b35;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
             margin-bottom: 8px;
         }
-        .highlight {
-            background-color: #f1f2f6;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
+
+        .toc a {
+            color: #4a5568;
+            text-decoration: none;
+            padding: 4px 0;
+            display: block;
+            transition: color 0.3s ease;
         }
-        .contact {
-            background-color: #e8f5e8;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
+
+        .toc a:hover {
+            color: #ff6b35;
         }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
+
+        /* App icon decoration */
+        .app-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy for Daily Dose</h1>
-        <p><strong>Last updated: August 5, 2024</strong></p>
-
-        <p>This Privacy Policy describes how Daily Dose ("we", "our", or "us") operates with complete privacy - <strong>we do not collect, transmit, or store any of your information on external servers</strong>. Everything you do with our mobile application ("Service") happens locally on your device only.</p>
-
-        <div class="highlight">
-            <h2>🚫 We Do NOT Collect Any Information</h2>
-            <p><strong>Daily Dose operates with zero data collection.</strong> We do not:</p>
-            <ul>
-                <li>Collect personal information</li>
-                <li>Transmit data to external servers</li>
-                <li>Use analytics or tracking</li>
-                <li>Store your data in the cloud</li>
-                <li>Share your information with third parties</li>
-            </ul>
+        <div class="header">
+            <div class="app-icon">
+                <img src="app_icon_image.png" alt="Daily Dose App Icon">
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Daily Dose - Your Privacy Matters</p>
         </div>
 
-        <h2>Information Stored Locally on Your Device</h2>
+        <div class="content">
+            <p><strong>Last updated: August 5, 2024</strong></p>
 
-        <h3>Personal Information (Device-Only)</h3>
-        <ul>
-            <li><strong>Custom Affirmations</strong>: Text affirmations you create and save within the app (stored locally only)</li>
-            <li><strong>Custom Themes</strong>: Personal affirmation categories you create with custom colors and icons (stored locally only)</li>
-            <li><strong>App Settings</strong>: Your notification preferences, theme settings, and app configuration (stored locally only)</li>
-            <li><strong>Usage Data</strong>: Analytics data for premium users (consistency tracking, usage patterns - stored locally only)</li>
-            <li><strong>Voice Recordings</strong>: Optional voice recordings of your affirmations (stored locally only)</li>
-        </ul>
+            <p>This Privacy Policy describes how Daily Dose ("we", "our", or "us") operates with complete privacy - <strong>we do not collect, transmit, or store any of your information on external servers</strong>. Everything you do with our mobile application ("Service") happens locally on your device only.</p>
 
-        <h3>Device Information (Local Only)</h3>
-        <ul>
-            <li><strong>Device Type</strong>: iOS device information for app optimization (processed locally only)</li>
-            <li><strong>App Version</strong>: Current app version for support purposes (stored locally only)</li>
-            <li><strong>Notification Settings</strong>: Your notification preferences and scheduling (stored locally only)</li>
-        </ul>
+            <p>If you have any questions about this Privacy Policy, please <a href="#contact" class="contact-link">contact us</a>.</p>
 
-        <h2>How Your Information is Used (Locally Only)</h2>
+            <div class="toc">
+                <h3>📋 Table of Contents</h3>
+                <ul>
+                    <li><a href="#no-collection">🚫 We Do NOT Collect Any Information</a></li>
+                    <li><a href="#local-storage">📱 Information Stored Locally</a></li>
+                    <li><a href="#usage">🔧 How Your Information is Used</a></li>
+                    <li><a href="#security">🔒 Data Storage and Security</a></li>
+                    <li><a href="#third-party">🔗 Third-Party Services</a></li>
+                    <li><a href="#rights">⚖️ Your Rights and Choices</a></li>
+                    <li><a href="#children">👶 Children's Privacy</a></li>
+                    <li><a href="#international">🌍 International Users</a></li>
+                    <li><a href="#changes">📝 Changes to This Policy</a></li>
+                    <li><a href="#contact">📞 Contact Us</a></li>
+                    <li><a href="#gdpr">🇪🇺 GDPR Compliance</a></li>
+                    <li><a href="#ccpa">🇺🇸 CCPA Compliance</a></li>
+                    <li><a href="#breach">🛡️ Data Breach Procedures</a></li>
+                </ul>
+            </div>
 
-        <h3>Primary Functions (All On-Device)</h3>
-        <ul>
-            <li><strong>Daily Affirmations</strong>: Provide personalized daily affirmations based on your local usage patterns</li>
-            <li><strong>Custom Content</strong>: Save and manage your personal affirmations and custom themes locally</li>
-            <li><strong>AI Generation</strong>: Generate personalized affirmations based on your mood and goals using on-device AI (premium feature)</li>
-            <li><strong>Notifications</strong>: Send scheduled reminders using local notifications (if enabled)</li>
-            <li><strong>Analytics</strong>: Provide insights about your affirmation practice using local data only (premium feature)</li>
-            <li><strong>Voice Recording</strong>: Record and transcribe your affirmations using local processing (optional feature)</li>
-        </ul>
+            <div id="no-collection" class="highlight">
+                <h2>🚫 We Do NOT Collect Any Information</h2>
+                <p><strong>Daily Dose operates with zero data collection.</strong> We do not:</p>
+                <ul>
+                    <li>Collect personal information</li>
+                    <li>Transmit data to external servers</li>
+                    <li>Use analytics or tracking</li>
+                    <li>Store your data in the cloud</li>
+                    <li>Share your information with third parties</li>
+                </ul>
+            </div>
 
-        <h3>Data Processing (100% Local)</h3>
-        <div class="highlight">
+            <h2 id="local-storage">Information Stored Locally on Your Device</h2>
+
+            <h3>Personal Information (Device-Only)</h3>
             <ul>
-                <li><strong>Local Storage Only</strong>: All data is stored locally on your device - never in the cloud</li>
-                <li><strong>Zero External Transmission</strong>: We do not transmit any data to external servers</li>
-                <li><strong>Complete Privacy</strong>: Your affirmations and settings remain completely private and local</li>
-                <li><strong>On-Device Processing</strong>: All AI and analytics processing happens on your device</li>
-                <li><strong>No Internet Required</strong>: The app works entirely offline after initial download</li>
+                <li><strong>Custom Affirmations</strong>: Text affirmations you create and save within the app (stored locally only)</li>
+                <li><strong>Custom Themes</strong>: Personal affirmation categories you create with custom colors and icons (stored locally only)</li>
+                <li><strong>App Settings</strong>: Your notification preferences, theme settings, and app configuration (stored locally only)</li>
+                <li><strong>Usage Data</strong>: Analytics data for premium users (consistency tracking, usage patterns - stored locally only)</li>
+                <li><strong>Voice Recordings</strong>: Optional voice recordings of your affirmations (stored locally only)</li>
             </ul>
-        </div>
 
-        <h2>Data Storage and Security (100% Local)</h2>
-
-        <h3>Local Storage Only</h3>
-        <ul>
-            <li>All affirmations, settings, and preferences are stored locally on your device only</li>
-            <li>Data is encrypted using iOS system encryption</li>
-            <li>No data is ever transmitted to external servers</li>
-            <li>No cloud storage or backup services are used</li>
-        </ul>
-
-        <h3>Data Retention (Device-Only)</h3>
-        <ul>
-            <li>Your data remains on your device until you delete it</li>
-            <li>Uninstalling the app removes all stored data</li>
-            <li>We do not maintain any copies of your data anywhere</li>
-            <li>No external backups or syncing services</li>
-        </ul>
-
-        <h2>Third-Party Services (Minimal & Local)</h2>
-
-        <h3>Apple Services (Local Processing Only)</h3>
-        <ul>
-            <li><strong>StoreKit</strong>: Used for in-app purchases and subscription management (no data collection)</li>
-            <li><strong>UserNotifications</strong>: Used for local notification delivery (no external transmission)</li>
-            <li><strong>Speech Recognition</strong>: Used for voice-to-text transcription (processed locally only)</li>
-            <li><strong>Core ML</strong>: Used for on-device AI affirmation generation (premium feature - no external processing)</li>
-            <li><strong>Natural Language</strong>: Used for text processing in AI generation (local processing only)</li>
-        </ul>
-
-        <h3>Zero Third-Party Analytics or Tracking</h3>
-        <ul>
-            <li>We do not use Google Analytics, Facebook Analytics, or similar services</li>
-            <li>No tracking cookies or advertising networks</li>
-            <li>No user behavior tracking or profiling</li>
-            <li>No crash reporting services that collect user data</li>
-            <li>No marketing or advertising services</li>
-        </ul>
-
-        <h2>Your Rights and Choices (Complete Control)</h2>
-
-        <h3>Data Control (100% Local)</h3>
-        <ul>
-            <li><strong>Delete Data</strong>: Uninstall the app to remove all stored data</li>
-            <li><strong>Export Data</strong>: Currently not available, but planned for future updates</li>
-            <li><strong>Modify Settings</strong>: Change notification preferences and app settings anytime</li>
-            <li><strong>Complete Ownership</strong>: All your data belongs to you and stays on your device</li>
-        </ul>
-
-        <h3>Privacy Controls (No External Dependencies)</h3>
-        <ul>
-            <li><strong>Notifications</strong>: Enable/disable notifications in app settings (local only)</li>
-            <li><strong>Analytics</strong>: Premium analytics are optional and process data locally only</li>
-            <li><strong>Voice Recording</strong>: Completely optional feature (local processing only)</li>
-            <li><strong>AI Generation</strong>: Premium feature that processes data locally on your device</li>
-            <li><strong>Custom Themes</strong>: Personal data that stays on your device only</li>
-        </ul>
-
-        <h2>Children's Privacy</h2>
-        <p>Our app is not directed to children under 13. Since we do not collect any personal information, there is no risk of collecting data from children under 13. All app usage is local to the device only.</p>
-
-        <h2>International Users</h2>
-        <p>If you are using our app from outside the United States, please be aware that your information is stored locally on your device only. We do not operate external servers or databases, so your data remains in your local jurisdiction and is never transmitted across borders.</p>
-
-        <h2>Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by:</p>
-        <ul>
-            <li>Posting the new Privacy Policy in the app</li>
-            <li>Updating the "Last updated" date at the top of this policy</li>
-        </ul>
-
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <h3>Device Information (Local Only)</h3>
             <ul>
-                <li><strong>Email</strong>: <a href="mailto:bowling.premier_9s@icloud.com">bowling.premier_9s@icloud.com</a></li>
-                <li><strong>App Support</strong>: Through the app's settings menu</li>
+                <li><strong>Device Type</strong>: iOS device information for app optimization (processed locally only)</li>
+                <li><strong>App Version</strong>: Current app version for support purposes (stored locally only)</li>
+                <li><strong>Notification Settings</strong>: Your notification preferences and scheduling (stored locally only)</li>
             </ul>
+
+            <h2 id="usage">How Your Information is Used (Locally Only)</h2>
+
+            <h3>Primary Functions (All On-Device)</h3>
+            <ul>
+                <li><strong>Daily Affirmations</strong>: Provide personalized daily affirmations based on your local usage patterns</li>
+                <li><strong>Custom Content</strong>: Save and manage your personal affirmations and custom themes locally</li>
+                <li><strong>AI Generation</strong>: Generate personalized affirmations based on your mood and goals using on-device AI (premium feature)</li>
+                <li><strong>Notifications</strong>: Send scheduled reminders using local notifications (if enabled)</li>
+                <li><strong>Analytics</strong>: Provide insights about your affirmation practice using local data only (premium feature)</li>
+                <li><strong>Voice Recording</strong>: Record and transcribe your affirmations using local processing (optional feature)</li>
+            </ul>
+
+            <h3>Data Processing (100% Local)</h3>
+            <div class="highlight">
+                <ul>
+                    <li><strong>Local Storage Only</strong>: All data is stored locally on your device - never in the cloud</li>
+                    <li><strong>Zero External Transmission</strong>: We do not transmit any data to external servers</li>
+                    <li><strong>Complete Privacy</strong>: Your affirmations and settings remain completely private and local</li>
+                    <li><strong>On-Device Processing</strong>: All AI and analytics processing happens on your device</li>
+                    <li><strong>No Internet Required</strong>: The app works entirely offline after initial download</li>
+                </ul>
+            </div>
+
+            <h2 id="security">Data Storage and Security (100% Local)</h2>
+
+            <h3>Local Storage Only</h3>
+            <ul>
+                <li>All affirmations, settings, and preferences are stored locally on your device only</li>
+                <li>Data is encrypted using iOS system encryption</li>
+                <li>No data is ever transmitted to external servers</li>
+                <li>No cloud storage or backup services are used</li>
+            </ul>
+
+            <h3>Data Retention (Device-Only)</h3>
+            <ul>
+                <li>Your data remains on your device until you delete it</li>
+                <li>Uninstalling the app removes all stored data</li>
+                <li>We do not maintain any copies of your data anywhere</li>
+                <li>No external backups or syncing services</li>
+            </ul>
+
+            <h2 id="third-party">Third-Party Services (Minimal & Local)</h2>
+
+            <h3>Apple Services (Local Processing Only)</h3>
+            <ul>
+                <li><strong>StoreKit</strong>: Used for in-app purchases and subscription management (no data collection)</li>
+                <li><strong>UserNotifications</strong>: Used for local notification delivery (no external transmission)</li>
+                <li><strong>Speech Recognition</strong>: Used for voice-to-text transcription (processed locally only)</li>
+                <li><strong>Core ML</strong>: Used for on-device AI affirmation generation (premium feature - no external processing)</li>
+                <li><strong>Natural Language</strong>: Used for text processing in AI generation (local processing only)</li>
+            </ul>
+
+            <h3>Zero Third-Party Analytics or Tracking</h3>
+            <ul>
+                <li>We do not use Google Analytics, Facebook Analytics, or similar services</li>
+                <li>No tracking cookies or advertising networks</li>
+                <li>No user behavior tracking or profiling</li>
+                <li>No crash reporting services that collect user data</li>
+                <li>No marketing or advertising services</li>
+            </ul>
+
+            <h2 id="rights">Your Rights and Choices (Complete Control)</h2>
+
+            <h3>Data Control (100% Local)</h3>
+            <ul>
+                <li><strong>Delete Data</strong>: Uninstall the app to remove all stored data</li>
+                <li><strong>Export Data</strong>: Currently not available, but planned for future updates</li>
+                <li><strong>Modify Settings</strong>: Change notification preferences and app settings anytime</li>
+                <li><strong>Complete Ownership</strong>: All your data belongs to you and stays on your device</li>
+            </ul>
+
+            <h3>Privacy Controls (No External Dependencies)</h3>
+            <ul>
+                <li><strong>Notifications</strong>: Enable/disable notifications in app settings (local only)</li>
+                <li><strong>Analytics</strong>: Premium analytics are optional and process data locally only</li>
+                <li><strong>Voice Recording</strong>: Completely optional feature (local processing only)</li>
+                <li><strong>AI Generation</strong>: Premium feature that processes data locally on your device</li>
+                <li><strong>Custom Themes</strong>: Personal data that stays on your device only</li>
+            </ul>
+
+            <h2 id="children">Children's Privacy</h2>
+            <p>Our app is not directed to children under 13. Since we do not collect any personal information, there is no risk of collecting data from children under 13. All app usage is local to the device only.</p>
+
+            <h2 id="international">International Users</h2>
+            <p>If you are using our app from outside the United States, please be aware that your information is stored locally on your device only. We do not operate external servers or databases, so your data remains in your local jurisdiction and is never transmitted across borders.</p>
+
+            <h2 id="changes">Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by:</p>
+            <ul>
+                <li>Posting the new Privacy Policy in the app</li>
+                <li>Updating the "Last updated" date at the top of this policy</li>
+            </ul>
+
+            <div id="contact" class="contact">
+                <h2>📞 Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy or need support with Daily Dose, please contact us:</p>
+                <ul>
+                    <li><strong>Email</strong>: <a href="mailto:bowling.premier_9s@icloud.com">bowling.premier_9s@icloud.com</a></li>
+                    <li><strong>App Support</strong>: Through the app's settings menu</li>
+                </ul>
+            </div>
+
+            <h2 id="gdpr">Legal Basis for Processing (GDPR)</h2>
+            <p>Since we do not collect, process, or store any personal information on external servers, GDPR compliance is simplified:</p>
+            <ul>
+                <li><strong>No Data Processing</strong>: We do not process personal data on external servers</li>
+                <li><strong>Local Processing Only</strong>: All data processing happens locally on your device</li>
+                <li><strong>No Data Transfers</strong>: No data is transferred outside your device</li>
+                <li><strong>User Control</strong>: You have complete control over your local data</li>
+            </ul>
+
+            <h2 id="ccpa">California Privacy Rights (CCPA)</h2>
+            <p>Since we do not collect, sell, or disclose any personal information, CCPA compliance is straightforward:</p>
+            <ul>
+                <li><strong>No Personal Information Collected</strong>: We do not collect any personal information</li>
+                <li><strong>No Data Sales</strong>: We do not sell or disclose any personal information</li>
+                <li><strong>Local Data Only</strong>: All your data remains on your device</li>
+                <li><strong>Complete Privacy</strong>: No external data processing or sharing</li>
+            </ul>
+
+            <h2 id="breach">Data Breach Procedures</h2>
+            <p>Since we do not collect, store, or transmit any data to external servers, there is no risk of a data breach through our services. All your data remains on your device only. However, in the unlikely event of a security issue with the app itself:</p>
+            <ol>
+                <li>We will assess the scope and impact</li>
+                <li>Notify users through app updates within 72 hours</li>
+                <li>Provide guidance on protecting your local information</li>
+                <li>Update the app to address any security concerns</li>
+            </ol>
         </div>
-
-        <h2>Legal Basis for Processing (GDPR)</h2>
-        <p>Since we do not collect, process, or store any personal information on external servers, GDPR compliance is simplified:</p>
-        <ul>
-            <li><strong>No Data Processing</strong>: We do not process personal data on external servers</li>
-            <li><strong>Local Processing Only</strong>: All data processing happens locally on your device</li>
-            <li><strong>No Data Transfers</strong>: No data is transferred outside your device</li>
-            <li><strong>User Control</strong>: You have complete control over your local data</li>
-        </ul>
-
-        <h2>California Privacy Rights (CCPA)</h2>
-        <p>Since we do not collect, sell, or disclose any personal information, CCPA compliance is straightforward:</p>
-        <ul>
-            <li><strong>No Personal Information Collected</strong>: We do not collect any personal information</li>
-            <li><strong>No Data Sales</strong>: We do not sell or disclose any personal information</li>
-            <li><strong>Local Data Only</strong>: All your data remains on your device</li>
-            <li><strong>Complete Privacy</strong>: No external data processing or sharing</li>
-        </ul>
-
-        <h2>Data Breach Procedures</h2>
-        <p>Since we do not collect, store, or transmit any data to external servers, there is no risk of a data breach through our services. All your data remains on your device only. However, in the unlikely event of a security issue with the app itself:</p>
-        <ol>
-            <li>We will assess the scope and impact</li>
-            <li>Notify users through app updates within 72 hours</li>
-            <li>Provide guidance on protecting your local information</li>
-            <li>Update the app to address any security concerns</li>
-        </ol>
 
         <div class="footer">
             <p><strong>Daily Dose</strong><br>
             Brandon A.<br>
             iOS App Developer<br>
-            bowling.premier_9s@icloud.com</p>
+            <a href="mailto:bowling.premier_9s@icloud.com">bowling.premier_9s@icloud.com</a></p>
             <p><em>This privacy policy is effective as of the date listed above.</em></p>
         </div>
     </div>

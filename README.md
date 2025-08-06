@@ -9,8 +9,7 @@ The privacy policy is available at: [https://bachu20.github.io/ios-privacy-polic
 ## Files
 
 - `index.html` - The main privacy policy page served by GitHub Pages
-- `privacy-policy.html` - Original privacy policy file
-- `privacy-policy.md` - Markdown version of the privacy policy
+- `app_icon_image.png` - App icon image used in the privacy policy
 - `.github/workflows/deploy.yml` - GitHub Actions workflow for automatic deployment
 
 ## GitHub Pages Setup
